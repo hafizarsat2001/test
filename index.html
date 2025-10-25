@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Spelling Bee Game</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>🐝 Spelling Bee</h1>
+
+    <div id="start-screen">
+      <p>Select a difficulty to begin:</p>
+      <button onclick="startGame('easy')">Easy</button>
+      <button onclick="startGame('medium')">Medium</button>
+      <button onclick="startGame('hard')">Hard</button>
+    </div>
+
+    <div id="game-screen" class="hidden">
+      <p><strong>Difficulty:</strong> <span id="difficulty-label"></span></p>
+      <p><strong>Category:</strong> <span id="category"></span></p>
+      <p><strong>Hint:</strong> <span id="hint"></span></p>
+      <button onclick="playWord()">🔊 Hear Word</button>
+
+      <form id="spellForm">
+        <input type="text" id="userInput" placeholder="Type the word..." required />
+        <button type="submit">Check</button>
+      </form>
+
+      <div id="result"></div>
+      <p><strong>Score:</strong> <span id="score">0</span></p>
+      <button onclick="nextWord()">Next Word</button>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
